@@ -5,18 +5,16 @@ import java.util.Scanner;
 public class Ejercicio6 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        int i = 0;
+int suma = 0;
+int numero = 1;
 int j;
-
-
-while (i <= 125) {
-    for (j = 1; j > 0; j--) {
-
-
-    }
-
-}
-
-
+        while (suma <= 125) {
+            numero ++;
+            suma = 0;
+            for (j = numero; j > 0; j--) {
+suma = suma + j;
+            }
+        }
+System.out.println(numero);
     }
 }
