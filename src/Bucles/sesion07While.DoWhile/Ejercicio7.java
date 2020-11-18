@@ -23,7 +23,7 @@ public class Ejercicio7 {
         while (numUsuario != 0 && numUsuario != numAleatorio) ;
         if (numUsuario == 0){
             System.out.println("Te has rendido, el número era: " + numUsuario);
-        } else if (numUsuario == numAleatorio){
+        } else {
             System.out.println("Felicidades, has encontrado el número.");
         }
     }
