@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ejercico4 {
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
+
         int i = 1;
         int j = 1;
         while (i <= 20) {
@@ -13,7 +13,6 @@ public class Ejercico4 {
                 i++;
                 j++;
             } else {
-                System.out.print("");
                 j++;
             }
 

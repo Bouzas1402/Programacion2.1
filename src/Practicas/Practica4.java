@@ -25,14 +25,14 @@ public class Practica4 {
                             for (i = 1; i <= numero2; i++) {
                                 System.out.print(caracter);
                             }
-                            System.out.println("");
+                            System.out.println();
                         }
                     } else {
                         for (j = 1; j <= numero2; j++) {
                             for (x = 1; x <= numero1; x++) {
                                 System.out.print(caracter);
                             }
-                            System.out.println("");
+                            System.out.println();
                         }
                     }
                     i++;
