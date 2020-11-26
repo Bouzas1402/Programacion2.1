@@ -37,6 +37,7 @@ public class Practica4 {
                     }
                     i++;
                     break;
+
                 case 2:
                     int numAleatorio = (int) (Math.random() * 100 + 1);
                     int numUsuario;
