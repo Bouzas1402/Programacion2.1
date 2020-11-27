@@ -52,8 +52,7 @@ public class Practica4 {
                         } else if (numUsuario < 0 || numUsuario > 100) {
                             System.out.println("El número " + numUsuario + " esta fuera de rango");
                         }
-                    }
-                    while (numUsuario != 0 && numUsuario != numAleatorio) ;
+                    } while (numUsuario != 0 && numUsuario != numAleatorio) ;
                     if (numUsuario == 0){
                         System.out.println("Te has rendido, el número era: " + numUsuario);
                     } else {
