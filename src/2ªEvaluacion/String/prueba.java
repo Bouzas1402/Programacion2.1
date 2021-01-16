@@ -3,7 +3,41 @@ import java.util.Scanner;
 import java.lang.String;
 public class prueba {
     public static void main(String[] args){
-        ejercicioPrueba7();
+       menu();
+    }
+    public static void menu() {
+        Scanner sc = new Scanner(System.in);
+        boolean repeticion = true;
+       do {
+           System.out.println("¿Qué ejercicio desea hacer?:\n2.Valor de str:\n3.Reemplazar caracteres:\4Comprobar si termina con...:\n5.Comprobar si comienza con... ignorando mayusculas y minusculas:\n6.Comparar cadenas ignorando los espacios en blanco:\n7.Extraer una subcadena:");
+           int ejercicio = sc.nextInt();
+           switch (ejercicio) {
+               case 2:
+                   ejercicioPrueba2();
+                   break;
+               case 3:
+                   ejercicioPrueba3();
+                   break;
+               case 4:
+                   ejercicioPrueba4();
+                   break;
+               case 5:
+                   ejercicioPrueba5();
+                   break;
+               case 6:
+                   ejercicioPrueba6();
+                   break;
+               case 7:
+                   ejercicioPrueba7();
+                   break;
+               case 0:
+                   System.out.println("Gracias");
+                   repeticion = false;
+                   break;
+               default:
+                   System.out.println("Opción no valida, marque otro numero.");
+           }
+       } while (repeticion);
     }
     public static void ejercicioPrueba2() {
 /*¿Qué valor tendrá la variable str despues de ejecutar el siguiente código?
