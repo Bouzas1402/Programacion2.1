@@ -1,4 +1,4 @@
-package Arrays.Dimensionales;
+package Arrays.HojaEjercicios1;
 import java.util.Arrays;
 public class Ejercicio10 {
     public static void main(String[] args){

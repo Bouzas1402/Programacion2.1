@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.HojaEjercicios1;
 import java.util.Arrays; //significa que la clase Arrays la estoy importando de la libreria java.util
 public class Ejercicio5 {
     public static void main(String[] args){
