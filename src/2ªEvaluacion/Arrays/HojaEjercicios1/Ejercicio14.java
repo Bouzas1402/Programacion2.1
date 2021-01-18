@@ -1,0 +1,7 @@
+package Arrays.HojaEjercicios1;
+public class Ejercicio14 {
+    public static void main(String[] args){
+
+
+    }
+}

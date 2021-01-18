@@ -2,13 +2,19 @@ package String;
 import java.util.Scanner;
 import java.lang.String;
 public class prueba {
+    public static Scanner sc = new Scanner(System.in);
     public static void main(String[] args){
-       menu();
+        boolean terminar = true;
+        do {
+            menu();
+        System.out.println("Desea terminar?: \nS/N");
+        String siONo = sc.nextLine();
+        if (siONo.equalsIgnoreCase("n")) {
+            terminar = false;
+        }
+        } while (terminar);
     }
     public static void menu() {
-        Scanner sc = new Scanner(System.in);
-        boolean repeticion = true;
-       do {
            System.out.println("¿Qué ejercicio desea hacer?:\n2.Valor de str:\n3.Reemplazar caracteres:\4Comprobar si termina con...:\n5.Comprobar si comienza con... ignorando mayusculas y minusculas:\n6.Comparar cadenas ignorando los espacios en blanco:\n7.Extraer una subcadena:");
            int ejercicio = sc.nextInt();
            switch (ejercicio) {
@@ -30,14 +36,11 @@ public class prueba {
                case 7:
                    ejercicioPrueba7();
                    break;
-               case 0:
-                   System.out.println("Gracias");
-                   repeticion = false;
-                   break;
                default:
                    System.out.println("Opción no valida, marque otro numero.");
            }
-       } while (repeticion);
+           sc.nextLine();
+
     }
     public static void ejercicioPrueba2() {
 /*¿Qué valor tendrá la variable str despues de ejecutar el siguiente código?
@@ -51,14 +54,14 @@ public static void ejercicioPrueba3() {
         /* Reemplazar caracteres: escribe un programa que lea una cadena de texto y reemplace todas
 las ocurrencias de la letra ‘a’ con la letra ‘b’. A continuación debe imprimir la cadena
 resultante. */
-String cadena = "a";
+    System.out.println("Introduce una cadena:");
+String cadena = sc.nextLine();
 cadena = cadena.replace("a", "b");
 System.out.println(cadena);
 }
 public static void ejercicioPrueba4() {
         /* Comprobar si termina con...: escribe un programa que lea el nombre de una ciudad y
 compruebe si el nombre termina con “burgo”. El programa debe imprimir true o false. */
-    Scanner sc = new Scanner(System.in);
 System.out.println("Introduzca el nombre de una ciudad:");
 String ciudad = sc.next();
 boolean terminoCiudad = ciudad.endsWith("burgo");
@@ -69,7 +72,6 @@ public static void ejercicioPrueba5(){
         /* Comprobar si comienza con... ignorando mayúsculas y minúsculas: escribe un programa
 que compruebe si una cadena dada comienza por “J”, sin que tenga en cuenta si está en
 mayúsculas o minúsculas. El programa debe imprimir true o false. */
-    Scanner sc = new Scanner(System.in);
     System.out.println("Escriba una cadena de texto:");
     String cadena = sc.next();
 System.out.println((String.valueOf(cadena.charAt(0))).equalsIgnoreCase("j"));
@@ -78,7 +80,6 @@ System.out.println((String.valueOf(cadena.charAt(0))).equalsIgnoreCase("j"));
 /*Comparar cadenas ignorando los espacios en blanco: escribe un programa que lea dos
 cadenas y las compare sin tener en cuenta los espacios en blanco. El programa debería
 imprimir true si son iguales, false en caso contrario.*/
-        Scanner sc = new Scanner(System.in);
         System.out.println("Escriba una cadena de texto:");
         String cadena1 = sc.nextLine();
         System.out.println("Escriba una cadena de texto:");
@@ -93,9 +94,8 @@ para indicar los límites inferior y superior respectivamente de un rango dentro
 posiciones de los caracteres de la cadena. Imprime la subcadena indicada por el rango: a)
 suponiendo que ambos números siempres son mayores o iguales a 0 y menores que la
 longitud de la cadena; b) Validando que sucede a).*/
-        Scanner sc = new Scanner(System.in);
         System.out.println("Introduce una cadena de texto:");
-        String cadena = sc.nextLine();
+         String cadena = sc.nextLine();
         int longitud = cadena.length();
         System.out.println("Introduce un valor entre 0 y " + longitud + "(incluidos)");
         int num1 = sc.nextInt();

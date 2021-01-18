@@ -1,7 +1,6 @@
 package Arrays.HojaEjercicios1;
-
+import java.util.Arrays;
 import java.util.Scanner;
-
 public class Ejercicio13 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -14,15 +13,23 @@ public class Ejercicio13 {
         //conductor.
         //Al finalizar se muestra la lista con los nombres de conductores y los kilómetros que ha
         //realizado.
-/*
-
-        int i;
-        do{
-            for (int j = 0; j < -1; j++) {
-                conductor[j] = sc.next();
+        String [] conductor = new String[5];
+        int [][] kmsDia = new int[5][7];
+        int [] KmsTotales = new int[5];
+        for (int i = 0; i < conductor.length; i++) {
+System.out.println("Introduce un conductor:");
+conductor [i] = sc.nextLine();
+System.out.println("Introduce los KM que hace cada dia (7 dias de la semana):");
+            for (int j = 0; j < kmsDia[i].length; j++) {
+kmsDia [i][j] = sc.nextInt();
+sc.nextLine();
+KmsTotales[i]+= kmsDia[i][j];
             }
-
-        }while (conductor[i] != "*");*/
-
+        }
+        System.out.println(Arrays.toString(conductor));
+        for (int i = 0; i < 5; i++) {
+            System.out.println(Arrays.toString(kmsDia[i]));
+        }
+        System.out.println(Arrays.toString(KmsTotales));
     }
 }
