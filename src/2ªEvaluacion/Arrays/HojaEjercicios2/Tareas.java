@@ -12,8 +12,19 @@ public class Tareas {
     public static void menu() {
         boolean siONo = true;
         do {
-            System.out.println("¿Qué ejercicio desea hacer?:\n1.Leer y mostrar en orden introducido:\n2.Leer y mostar en orden inverso:" +
-                    "\n3.Leer y hacer medias:\n4.Leer y reordenarlos:\n5.Reoordenar 2 listas en otra:\n6.Extraer una subcadena:");
+            System.out.println("¿Qué ejercicio desea hacer?:" +
+                    "\n1.Leer y mostrar en orden introducido:" +
+                    "\n2.Leer y mostar en orden inverso:" +
+                    "\n3.Leer y hacer medias:" +
+                    "\n4.Leer y reordenarlos:" +
+                    "\n5.Reoordenar 2 listas en otra:" +
+                    "\n6.Extraer una subcadena:" +
+                    "\n7." +
+                    "\n8." +
+                    "\n9." +
+                    "\n10." +
+                    "\n11." +
+                    "\n12.");
             int ejercicio = sc.nextInt();
             switch (ejercicio) {
                 case 1:
@@ -36,11 +47,11 @@ public class Tareas {
 Ejercicio5();
                      siONo = false;
                     break;
-                 /*   case :
-
+                    case 6:
+Ejercicio6();
                     siONo = false;
                     break;
-                    case :
+                  /*  case :
 
                     siONo = false;
                     break;*/
@@ -108,7 +119,7 @@ Ejercicio5();
 //4. Leer 10 números enteros. Debemos mostrarlos en el siguiente orden: el primero, el
 //último, el segundo, el penúltimo, el tercero, etc.
         int[] numeros = new int[10];
-        int contador = 0;
+       int contador = 0;
         int contador2 = (numeros.length - 1);
         for (int i = 0; i < numeros.length;) {
             System.out.println("Introduce un numero:");
@@ -121,6 +132,13 @@ numeros [i] = sc.nextInt();
 i -= 2;
         }
         System.out.println(Arrays.toString(numeros));
+
+
+
+char [] A = {'a','b','c','d','e','f','g','h','i','j'};
+        for (int i = 0; i < 5; i++) {
+            System.out.print(A[i] + " " + A[(A.length - 1) - i] + " ");
+        }
     }
 
 public static void Ejercicio5() {
@@ -140,7 +158,7 @@ public static void Ejercicio5() {
     int contadorLista1 = 0;
     int contadorLista2 = 0;
     for (int i = 0; i < 20; i++) {
-        if ((i == 0) || (i % 2 == 0)) {
+        if (i % 2 == 0) {
             numeros3 [i] = numeros1[contadorLista1];
 contadorLista1 += 1;
         } else {
@@ -152,6 +170,46 @@ contadorLista1 += 1;
     System.out.println(Arrays.toString(numeros2));
     System.out.println(Arrays.toString(numeros3));
 
+    /*
+    * char [] A = {'A','B','C','D','E','F','G','H','I','J'}
+    * char [] B = {'a','b','c','d','e','f','g','h','i','j'}
+    *
+    *
+    * */
 }
+
+public static void Ejercicio6() {
+        //6. Leer los datos correspondiente a dos tablas de 12 elementos numéricos, y mezclarlos en
+        //una tercera de la forma: 3 de la tabla A, 3 de la B, otros 3 de A, otros 3 de la B, etc.
+      int[] tabla1 = new int[12];
+      int[] tabla2 = new int [12];
+      int[] tabla3 = new int[24];
+    for (int i = 0; i < tabla1.length; i++) {
+        System.out.println("introduce un numero para la primera lista:");
+        tabla1 [i] = sc.nextInt();
+    }
+    for (int i = 0; i < tabla2.length; i++) {
+        System.out.println("introduce un numero para la segunda lista:");
+        tabla2 [i] = sc.nextInt();
+    }
+    boolean cambio = true;
+    int contador = 0;
+    int contadorTabla1 = 0;
+    int contadorTabla2 = 0;
+    for (int i = 0; i < tabla2.length; i++) {
+        if (cambio == true) {
+tabla3 [i] = tabla1[contadorTabla1];
+        } else {
+tabla3 [i] = tabla2[contadorTabla2];
+        }
+        if (contador == 3) {
+            cambio = !cambio;
+    }
+}
+    System.out.println(Arrays.toString(tabla1));
+    System.out.println(Arrays.toString(tabla2));
+    System.out.println(Arrays.toString(tabla3));
+    }
+
 
 }
