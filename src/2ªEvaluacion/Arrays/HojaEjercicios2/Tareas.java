@@ -51,7 +51,23 @@ Ejercicio5();
 Ejercicio6();
                     siONo = false;
                     break;
-                  /*  case :
+                  case 7:
+Ejercicio7();
+                    siONo = false;
+                    break;
+                   /*   case :
+
+                    siONo = false;
+                    break;
+                    case :
+
+                    siONo = false;
+                    break;
+                    case :
+
+                    siONo = false;
+                    break;
+                    case :
 
                     siONo = false;
                     break;*/
@@ -211,5 +227,37 @@ tabla3 [i] = tabla2[contadorTabla2];
     System.out.println(Arrays.toString(tabla3));
     }
 
+    public static void Ejercicio7() {
+        //7. Leer por teclado una serie de 10 números enteros. La aplicación debe indicarnos si los
+        //números están ordenados de forma creciente, decreciente, o si están desordenados.
+        int[] A = {0,1,2,3,4,5,6,7,8,9};
+        int[] B = {9,8,7,6,5,4,3,2,1,0};
+        int[] C = {0,1,2,3,4,5,9,8,7,6};
+int orden;
+        if (A[0] < A[1]) { //si pasa esto es que es descendente o desordenado
+            for (int i = 0; i < A.length - 1; i++) {
+                if (A[i] < A[i + 1]){
+                    orden = 1;
+                    continue;
 
-}
+                } else {
+                    System.out.println("Esta desordenada");
+                    orden = 0;
+                    break;
+                }
+            }
+            System.out.println("Esta ordenado de manera ascendente");
+        } else {
+            for (int i = 0; i < A.length - 1; i++) {
+                if(A[i] > A[i+1]){
+                    orden = -1;
+                } else {
+                    orden = 0;
+                }
+            }
+
+        }
+            }
+
+
+        }
