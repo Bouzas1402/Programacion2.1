@@ -1,4 +1,5 @@
 package Practicas;
+import java.util.Arrays;
 import java.util.Scanner;
 public class practicaArrays {
 static Scanner sc = new Scanner(System.in);
@@ -20,6 +21,8 @@ while (jugar) {
     int [] barajaLlena2 = crearBaraja(baraja2);
             int [] baraja1Barajeada = desordenarBaraja(barajaLlena1);
     int [] baraja2Barajeada = desordenarBaraja(barajaLlena2);
+    System.out.println(Arrays.toString(baraja1Barajeada));
+    System.out.println(Arrays.toString(baraja2Barajeada));
 juego(baraja1Barajeada,baraja2Barajeada);
 System.out.println("¿Quieres seguir jugando?:\nS/N");
 String siONo2 = sc.nextLine();
@@ -44,23 +47,27 @@ if (siONo2.equalsIgnoreCase("n")){
         return array;
     }
     public static int[] desordenarBaraja(int[] array) {
-
-        int[] x = new int[40];
-        int[] y = new int[40];
-        for (int i = 0; i < x.length; i++) {
-            x[i] = (int) (Math.random() * 40);
+/* Para desordenar la baraja voy a llenar un array del mismo tamaño con números aleatorios del 0 a la longitud del array
+* sin repetir esos números. Esos números representaran la nueva posición que van a ocupar las cartas en la baraja, es decir,
+* si x[0] toma valor de 12 significa que array[0] tomara la posición 12 en el array 'y', de esta manera le asigno una nueva
+* posición a cada carta de manera aleatoria.*/
+        int[] x = new int[array.length];
+        int[] y = new int[array.length];
+        for (int i = 0; i < x.length; i++) {               //formo el array con números aleatorios al azar.
+            x[i] = (int) (Math.random() * (array.length));
         }
-        for (int i = 0; i < x.length; i++) {
-            for (int j = 0; j < x.length; j++) {
-                if ((x[i] == x[j]) && (i != j)) {
-                    x[i] = (int) (Math.random() * 40);
-                    i = 0;
+        // El doble bucle hace que se vayan sustituyendo todos los valores repetidos por unos nuevos.
+        for (int i = 0; i < x.length; i++) {              //Compararemos cada posición de x con las otras posiciones de x para que si
+            for (int j = 0; j < x.length; j++) {         // hay algún valor repetido en posiciones distintas se le asigne un nuevo valor
+                if ((x[i] == x[j]) && (i != j)) {         // a esa posición.
+                    x[i] = (int) (Math.random() * (array.length));
+                    i = 0;          // reiniciamos i si encontramos un valor repetido para asegurarnos que el nuevo valor no esté también repetido.
                 }
             }
         }
         for (int i = 0; i < x.length; i++) {
-            int z = x[i];
-            y[i] = array[z];
+            int z = x[i];     // Recogemos el valor de x en la posicion de i
+            y[z] = array[i];  // Mandamos la carta en la carta en la posicion 'i' al lugar de 'y' que 'x' le ha asignado
         }
         return y;
     }
