@@ -52,7 +52,7 @@ public class practicaArrays {
         return array;
     }
     public static int[] desordenarBaraja(int[] array) {
-        /* Para desordenar la baraja voy a llenar un array del mismo tamaño con números aleatorios del 0 a la longitud del array
+        /* Para desordenar la baraja voy a llenar un array del mismo tamaño con números aleatorios del 0 a la longitud del array -1
          * sin repetir esos números. Esos números representaran la nueva posición que van a ocupar las cartas en la baraja, es decir,
          * si x[0] toma valor de 12 significa que array[0] tomara la posición 12 en el array 'y', de esta manera le asigno una nueva
          * posición a cada carta de manera aleatoria.*/
@@ -111,11 +111,7 @@ public class practicaArrays {
         boolean repetir1;
         do {
             repetir = true;
-            int [] barajaLlena1 = crearBaraja(array1);
-            int [] barajaLlena2 = crearBaraja(array2);
-            int [] baraja1Barajeada = desordenarBaraja(barajaLlena1);
-            int [] baraja2Barajeada = desordenarBaraja(barajaLlena2);
-            juego(baraja1Barajeada,baraja2Barajeada);
+            juego(desordenarBaraja(crearBaraja(array1)),desordenarBaraja(crearBaraja(array2)));
             do {
                 repetir1 = true;
                 System.out.println("¿Quieres jugar otra vez?:\nS/N");
