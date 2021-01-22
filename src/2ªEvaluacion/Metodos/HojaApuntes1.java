@@ -42,6 +42,13 @@ static Scanner sc = new Scanner(System.in);
         System.out.println("Introduzca un valor donde terminar:");
         int y = sc.nextInt();
         System.out.println(sumaEnRango(x,y));
+
+        //Ejercicio 12: La respues correcta es la b.
+
+        //Ejercicio 18:
+        System.out.println("Introduzca un numero:");
+        int y4 = sc.nextInt();
+       System.out.println(getMaxMenosValorI(y4));
     }
     //Preguntas y ejercicios: 1.
     public static void printSum(long val1, int val2) {
@@ -90,5 +97,12 @@ long suma = 0;
 return suma;
 }
 
+//Ejercicio 18:
+public static long getMaxMenosValorL(long val) {
+    return Long.MAX_VALUE - val;
+}
+    public static int getMaxMenosValorI(int val) {
+        return Integer.MAX_VALUE - val;
+    }
 
 }
