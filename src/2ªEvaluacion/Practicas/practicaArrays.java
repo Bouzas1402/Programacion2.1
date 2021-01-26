@@ -72,7 +72,7 @@ public class practicaArrays {
         }
         for (int i = 0; i < x.length; i++) {
             int z = x[i];     // Recogemos el valor de x en la posicion de i
-            y[z] = array[i];  // Mandamos la carta en la carta en la posicion 'i' al lugar de 'y' que 'x' le ha asignado
+            y[z] = array[i];  // Mandamos la carta en la posicion 'i' al lugar de 'y' que 'x' le ha asignado
         }
         return y;
     }
