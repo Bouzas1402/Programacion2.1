@@ -8,11 +8,11 @@ public class Ejercicio10 {
         System.out.println("Introduzca una cadena:");
         String cadena = sc.nextLine();
        boolean mismoTexto = true;
-       String cadenaSinEspacios = cadena.replace(" ","");
-       System.out.println(cadenaSinEspacios);
-        for (int i = 0; i < cadenaSinEspacios.length(); i++) {
-            int contador = (cadenaSinEspacios.length() - 1) - i;
-            if (cadenaSinEspacios.charAt(i) != cadenaSinEspacios.charAt(contador)){
+       cadena = cadena.replace(" ","");
+       System.out.println(cadena);
+        for (int i = 0; i < cadena.length(); i++) {
+            int contador = (cadena.length() - 1) - i;
+            if (cadena.charAt(i) != cadena.charAt(contador)){
             mismoTexto = false;
             }
             }
