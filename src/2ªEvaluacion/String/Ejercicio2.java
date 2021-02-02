@@ -9,7 +9,7 @@ public class Ejercicio2 {
         String cadena1 = sc.nextLine();
         System.out.println("Escribe una cadena de texto:");
         String cadena2 = sc.nextLine();
-        boolean empiezaPor = cadena1.startsWith(cadena2);
+        boolean empiezaPor = cadena1.toLowerCase().startsWith(cadena2.toLowerCase());
         System.out.println(empiezaPor);
     }
 }
