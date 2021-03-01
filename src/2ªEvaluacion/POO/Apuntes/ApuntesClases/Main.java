@@ -33,6 +33,11 @@ String [] sintoma = {"Tos","Fiebre","Cansancio"};
     for (int i = 0; i < paciente3.sintomas.length; i++) {
         System.out.println(" * " + paciente3.sintomas[i]);
     }
+    //llamamos a toString()
+       String p = paciente1.toString();
+        System.out.println(p);
+
+
     }
 }
 
