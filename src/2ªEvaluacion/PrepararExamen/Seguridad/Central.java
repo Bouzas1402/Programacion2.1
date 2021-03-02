@@ -3,8 +3,8 @@ package PrepararExamen.Seguridad;
 import java.util.ArrayList;
 
 public class Central {
-    private String ciudad;
-   private ArrayList<Edificio> edificio;
+    String ciudad;
+    ArrayList<Edificio> edificio;
    //contructor
    public Central(String ciudad){
        this.ciudad = ciudad;
@@ -18,13 +18,16 @@ public class Central {
     public void setCiudad(String ciudad) {
        this.ciudad = ciudad;
     }
-
     //toString
     @Override
-    public String toString(){
-        return "Este usuario tiene los atributos con estos valores{" +
-                "ciudad ='" + this.ciudad;
+    public String toString() {
+        return "Central{" +
+                "ciudad='" + ciudad + '\'' +
+                ", edificio=" + edificio +
+                '}';
     }
+
+
 
     public void añadirEdificio(){
 

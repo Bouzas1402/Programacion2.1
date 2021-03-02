@@ -59,7 +59,27 @@ public class Tareas {
                     Ejercicio8();
                     siONo = false;
                     break;
-                /*      case :
+                    case 9:
+Ejercicio9();
+                    siONo = false;
+                    break;
+                     case 10:
+Ejercicio10();
+                    siONo = false;
+                    break;
+                    case 11:
+Ejercicio11();
+                    siONo = false;
+                    break;
+                   /*  case :
+
+                    siONo = false;
+                    break;
+                    case :
+
+                    siONo = false;
+                    break;
+                    case :
 
                     siONo = false;
                     break;
@@ -285,5 +305,60 @@ System.out.println(Arrays.toString(array));
         //9.Crear un programa que lea por teclado una tabla de 10 números enteros y la desplace una posición hacia
         //abajo: el primero pasa a ser el segundo, el segundo pasa a ser el tercero y así sucesivamente. El último pasa a
         //ser el primero.
+        int [] array = new int[10];
+        for (int i = 0; i < array.length; i++) {
+            System.out.println("Introduzca 10 enteros:");
+            array[i] = sc.nextInt();
+        }
+        int guardarValor = array[9];
+
+        for (int i = array.length - 2; i >= 0; i--) {
+            array [i + 1] = array[i];
+        }
+        array[0] = guardarValor;
+
+        System.out.println(Arrays.toString(array));
+// con int[] copia = array.clone(); clono un array (copia es el nombre del nuevo array y array es el nombre del array
+
     }
+
+public static void Ejercicio10(){
+        //10. Ídem, desplazar N posiciones (N es introducido por el usuario).
+    int [] array = new int[10];
+    int [] array2 = new int[10];
+    int x = 0;
+    for (int i = 0; i < array.length; i++) {
+        System.out.println("Introduzca 10 enteros:");
+        array[i] = sc.nextInt();
+    }
+    System.out.println("¿Cuantos puestos quieres desplazarlo?:");
+    int desplazar = sc.nextInt();
+    for (int i = 0; i < array.length; i++) {
+        if ((i + desplazar) < array.length) {
+        array2 [i + desplazar] = array [i];
+    } else {
+        array2 [x] = array [i];
+        x++;
+        }
+    }
+    System.out.println(Arrays.toString(array2));
 }
+
+public static void Ejercicio11(){
+        //11. Leer 5 elementos numéricos que se introducirán ordenados de forma creciente. Éstos
+    //los guardaremos en una tabla de tamaño 10. Leer un número N, e insertarlo en el lugar
+    //adecuado para que la tabla continúe ordenada.
+    int [] array = new int[10];
+    for (int i = 0; i < 5; i++) {
+        System.out.println("Introduzca 5 enteros:");
+        array[i] = sc.nextInt();
+    }
+    System.out.println("Introduzca otro numero:");
+array[5] = sc.nextInt();
+Arrays.sort(array);
+System.out.println(Arrays.toString(array));
+
+
+
+        }
+    }
