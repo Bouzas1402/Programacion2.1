@@ -2,11 +2,11 @@ package PrepararExamen.Seguridad;
 
 public class Sensor {
  //modificardor de acceso por defecto (al no poner ninguno), no tendremos ningun problema para acceder dentro del mismo paquete.
-     TipoAlerta.tipo tipo;
+     TipoAlerta tipo;
      boolean activado;
      String ubicacion;
 
-     public Sensor(TipoAlerta.tipo tipo) {
+     public Sensor(TipoAlerta tipo) {
 this.tipo = tipo;
 this.activado = false;
      }

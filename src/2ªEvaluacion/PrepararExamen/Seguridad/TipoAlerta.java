@@ -1,9 +1,9 @@
 package PrepararExamen.Seguridad;
 
-public class TipoAlerta {
-   enum tipo {
+public enum TipoAlerta {
+
        INCENDIO,ROBO
-   }
+
 
 
 }

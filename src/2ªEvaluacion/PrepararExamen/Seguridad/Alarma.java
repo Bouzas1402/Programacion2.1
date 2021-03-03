@@ -2,10 +2,10 @@ package PrepararExamen.Seguridad;
 import java.util.ArrayList;
 
 public class Alarma {
-    TipoAlerta.tipo tipo;
+    TipoAlerta tipo;
 ArrayList<Sensor> sensores;
 
-    public Alarma(TipoAlerta.tipo tipo) {
+    public Alarma(TipoAlerta tipo) {
         this.tipo = tipo;
         ArrayList<Sensor> sensores = new ArrayList<>();
         this.sensores = sensores;
@@ -21,7 +21,7 @@ ArrayList<Sensor> sensores;
 
     public void sonar(Sensor sensor){
         if (sensor.activado == true) {
-            if (sensor.tipo == TipoAlerta.tipo.INCENDIO){
+            if (sensor.tipo == TipoAlerta.INCENDIO){
                 System.out.println("Avisar bomberos y policia");
 
             } else {
@@ -30,7 +30,7 @@ ArrayList<Sensor> sensores;
         }
     }
 
-    public void añadirSensor(TipoAlerta.tipo tipo){
+    public void añadirSensor(TipoAlerta tipo){
         Sensor s = new Sensor(tipo);
         this.sensores.add(s);
     }

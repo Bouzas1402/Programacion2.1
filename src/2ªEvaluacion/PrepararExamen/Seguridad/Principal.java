@@ -2,7 +2,7 @@ package PrepararExamen.Seguridad;
 
 public class Principal {
     public static void main(String[] args) {
-        Sensor sensor1 = new Sensor(TipoAlerta.tipo.INCENDIO);
+        Sensor sensor1 = new Sensor(TipoAlerta.INCENDIO);
         System.out.println("Estado del sendor: " + sensor1.mostrarEstado());
         sensor1.activar();
         System.out.println("Estado del sendor: " + sensor1.mostrarEstado());
@@ -13,9 +13,9 @@ public class Principal {
 
    //PRUEBAS CLASE ALARMA
 
-        Alarma alarma1 = new Alarma(TipoAlerta.tipo.ROBO);
+        Alarma alarma1 = new Alarma(TipoAlerta.ROBO);
         System.out.println(alarma1.toString());
-alarma1.añadirSensor(TipoAlerta.tipo.ROBO);
+alarma1.añadirSensor(TipoAlerta.ROBO);
         System.out.println(alarma1.toString());
         alarma1.sonar(alarma1.sensores.get(0));
         alarma1.sensores.get(0).activar();
