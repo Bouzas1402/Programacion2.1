@@ -41,10 +41,29 @@ alarma1.sonar(sensor1);
 
         Alarma alarma2 = edificio2.crearAlarma(TipoAlerta.INCENDIO);
         edificio2.añadirAlarma(alarma2);
+        edificio2.añadirAlarma(alarma1);
         System.out.println(edificio2.toString());
 
         edificio2.quitarAlarma(0);
         System.out.println(edificio2.toString());
+ edificio2.añadirAlarma(edificio2.crearAlarma(TipoAlerta.INCENDIO));
+       // DA ERROR PROBAR System.out.println(edificio2.mostrarAlarmas());
+
+        //Crear central en madrid
+
+        Central central1 = new Central("Madrid");
+        System.out.println(central1.toString());
+
+        //mostramos las edificios de la central
+        System.out.println(central1.toString());
+        //añadimos un edificio
+        central1.añadirEdificio(edificio2);
+//lo mostramos
+        central1.mostrarEdificios();
+        //lo quitamos
+        central1.quitarEdificio(0);
+        // lo volvemos a mostrar
+        central1.mostrarEdificios();
 
     }
 }

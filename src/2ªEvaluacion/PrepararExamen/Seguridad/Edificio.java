@@ -2,8 +2,8 @@ package PrepararExamen.Seguridad;
 import java.util.ArrayList;
 public class Edificio {
 
-    private String direccion;
-    private Integer codigoPostal;
+     String direccion;
+     Integer codigoPostal;
     ArrayList<Alarma> alarmas;
 
     public Edificio(String direccion, Integer codigoPostal){
@@ -12,6 +12,9 @@ public class Edificio {
         //creamos en el constructor el arraylist pero esta vacio
         ArrayList<Alarma> alarmas = new ArrayList<>();
         this.alarmas = alarmas;
+    }
+
+    public Edificio() {
     }
 
     @Override
@@ -45,7 +48,7 @@ public class Edificio {
     public void mostrarAlarmas(){
         System.out.println("Las alarmas instaladas en este edificio son:");
         for (int i = 0; i < alarmas.size(); i++) {
-            // System.out.println((i+1) + alarmas.get(i).tipo);
+             System.out.println((i+1) + "-" + alarmas.get(i).tipo);
         }
     }
 
